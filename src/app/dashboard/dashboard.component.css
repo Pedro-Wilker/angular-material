@@ -1,0 +1,46 @@
+.form-container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container mat-form-field + mat-form-field {
+    margin-left: 1rem;
+}
+
+.form-container mat-form-field {
+    width: 100%;
+    max-width: 20rem;
+}
+
+.form-container form {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-container form > * {
+    margin: 0.8rem 0;
+}
+
+.form-container .mat-radio-button {
+    margin: 0 1rem;
+}
+
+.form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}

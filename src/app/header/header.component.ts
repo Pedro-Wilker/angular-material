@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -7,35 +7,18 @@ import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CustomSidenavComponent } from "../components/custom-sidenav/custom-sidenav.component";
 
 @Component({
   selector: 'app-header',
   imports: [MatToolbarModule, MatButtonModule, MatIconModule,
     MatSidenavModule, MatListModule, FormsModule,
-    RouterModule, CommonModule
-
-  ],
+    RouterModule, CommonModule, CustomSidenavComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  opened=false;
+  collapsed = signal(false);
 
-  items = [
-    {
-      icon: 'pi pi-home',
-      label: 'Home',
-      routeLink: 'dashboard'
-    },
-    {
-      icon: 'pi pi-check',
-      label: 'Contact',
-      routeLink: 'contact',
-    },
-    {
-      icon: 'pi pi-check',
-      label: 'New Contact',
-      routeLink: 'new-contact'
-    },
-  ];
+  sidenavWidth = computed(()=> this.collapsed() ? '0px':'12.5rem');
 }

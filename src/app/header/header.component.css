@@ -1,59 +1,28 @@
 mat-toolbar{
-  background: #c50000;
+  position: relative;
+  z-index: 5;
+  background: white;
   color: black;
 }
 
-
-mat-drawer-container{
+mat-icon{
   color: black;
-  background: rgb(163, 26, 26);
 }
 
-mat-list-item{
-  color: black;
+.content{
+  padding: 24px;
 }
 
 mat-sidenav-container{
-  height: calc(205vh - 115vh);
+  height: calc(100vh - 64px);
+  background-color: aliceblue;
+  color: black;
 }
 
 mat-sidenav{
-  width: 200px;
-  background-color: #5c0909;
+  background: whitesmoke;
 }
 
-.sidenav-nav-item {
-  width: 100%;
-  margin-bottom: 0.625rem;
-}
-.sidenav-nav-item .sidenav-nav-link {
-  display: flex;
-  align-items: center;
-  height: 3rem;
-  color: #be1818;
-  text-decoration: none;
-  border-radius: 0.625rem;
-  transition: all 0.3s ease;
-}
-.sidenav-nav-item .sidenav-nav-link .sidenav-link-icon {
-  font-size: 22px;
-  width: 2rem;
-  min-width: 2rem;
-  text-align: center;
-  padding: 12px;
-}
-.sidenav-nav .sidenav-nav-item .sidenav-nav-link .sidenav-link-text {
-  margin-left: 1.5rem;
-}
-.sidenav-nav .sidenav-nav-item:hover .sidenav-nav-link {
-  background-color: #000000;
-  color: #000;
-}
-
-.sidenav-link-icon,
-.sidenav-link-text {
-  color: #000;
-}
 .spacer {
   flex: 1 1 auto;
 }
